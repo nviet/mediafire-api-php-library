@@ -51,8 +51,8 @@ class mflib
     public $password;
 
     /**
-     * The Facebook Access Token of the user whose MediaFire account is 
-     * associated with the corresponding Facebook Account (not required if 
+     * The Facebook Access Token of the user whose MediaFire account is
+     * associated with the corresponding Facebook Account (not required if
      * $email and $password are provided), for getting session token
      *
      * @access public
@@ -78,7 +78,7 @@ class mflib
     public $userAgent = "Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Trident/6.0)";
 
     /**
-     * Format of the response from MediaFire, can either be JSON or XML. 
+     * Format of the response from MediaFire, can either be JSON or XML.
      * Default is 'json'
      *
      * @access protected
@@ -180,7 +180,7 @@ class mflib
      * @var array
      */
     protected $uploadResult = array(
-        -80 => "Upload Key not found", 
+        -80 => "Upload Key not found",
         -20 => "Invalid Upload Key",
         0 => "Success"
     );
@@ -192,7 +192,7 @@ class mflib
      * @var array
      */
     protected $uploadStatus = array(
-        0 => "Unknown or no status available for this key", 
+        0 => "Unknown or no status available for this key",
         2 => "Key is ready for use",
         3 => "Upload is in progress",
         4 => "Upload is completed",
@@ -574,7 +574,7 @@ class mflib
             return $data;
         } else
         {
-            $this->showError(trim($data["message"]), trim($data["error"]));
+            #$this->showError(trim($data["message"]), trim($data["error"]));
             return false;
         }
     }
@@ -970,8 +970,8 @@ class mflib
     }
 
     /**
-     * Note: This method was removed from the MediaFire API in 31-Jan-2013 and 
-     * is no longer available since version 0.33 of this library. The code is 
+     * Note: This method was removed from the MediaFire API in 31-Jan-2013 and
+     * is no longer available since version 0.33 of this library. The code is
      * still kept for reference only
      *
      * Registers a MediaFire account. Note: This call requires SSL
@@ -1331,8 +1331,8 @@ class mflib
      * Return the view link, normal download link, and if possible the direct
      * download link of a file.
      *
-     * The direct download link can only be generated for files uploaded by the 
-     * MediaFire account owner himself/herself. If the link is not generated, 
+     * The direct download link can only be generated for files uploaded by the
+     * MediaFire account owner himself/herself. If the link is not generated,
      * an error message is returned explaining the reason
      *
      * @access public
